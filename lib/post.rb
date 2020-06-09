@@ -11,12 +11,13 @@ attr_accessor :title, :author
     @@all
   end
   
-  def author
-    @author = self.author.name
-  end
-  
   def author_name
-    @author
+    if self.author
+    author = self.author.name
+    else
+    author = nil
+    end
+  author 
   end
-  
+
 end
